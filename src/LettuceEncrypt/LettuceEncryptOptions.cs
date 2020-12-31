@@ -71,5 +71,15 @@ namespace LettuceEncrypt
         /// The asymmetric algorithm used for generating a private key for certificates: RS256, ES256, ES384, ES512
         /// </summary>
         public KeyAlgorithm KeyAlgorithm { get; set; } = KeyAlgorithm.ES256;
+
+        /// <summary>
+        /// The CA URL which overrides the default Let's Encrypt name servers.
+        /// </summary>
+        public string NameServer { get; set; } = string.Empty;
+
+        /// <summary>
+        /// The staging CA URL which overrides the default staging Let's Encrypt name servers.
+        /// </summary>
+        public string StagingNameServer { get; set; } = string.Empty;
     }
 }

@@ -33,9 +33,18 @@ namespace LettuceEncrypt.Internal
                     ? options.UseStagingServer
                     : _env.IsDevelopment();
 
-                return useStaging
-                    ? WellKnownServers.LetsEncryptStagingV2
-                    : WellKnownServers.LetsEncryptV2;
+                if (useStaging)
+                {
+                    return !string.IsNullOrEmpty(options.NameServer)
+                        ? new Uri(options.NameServer)
+                        : WellKnownServers.LetsEncryptV2;
+                }
+                else
+                {
+                    return !string.IsNullOrEmpty(options.StagingNameServer)
+                        ? new Uri(options.StagingNameServer)
+                        : WellKnownServers.LetsEncryptStagingV2;
+                }
             }
         }
     }

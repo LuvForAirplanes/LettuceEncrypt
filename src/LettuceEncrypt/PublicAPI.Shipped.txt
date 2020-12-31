@@ -40,6 +40,10 @@ LettuceEncrypt.LettuceEncryptOptions.RenewDaysInAdvance.get -> System.TimeSpan?
 LettuceEncrypt.LettuceEncryptOptions.RenewDaysInAdvance.set -> void
 LettuceEncrypt.LettuceEncryptOptions.UseStagingServer.get -> bool
 LettuceEncrypt.LettuceEncryptOptions.UseStagingServer.set -> void
+LettuceEncrypt.LettuceEncryptOptions.NameServer.get -> string!
+LettuceEncrypt.LettuceEncryptOptions.NameServer.set -> void
+LettuceEncrypt.LettuceEncryptOptions.StagingNameServer.get -> string!
+LettuceEncrypt.LettuceEncryptOptions.StagingNameServer.set -> void
 Microsoft.Extensions.DependencyInjection.LettuceEncryptServiceCollectionExtensions
 static LettuceEncrypt.FileSystemStorageExtensions.PersistDataToDirectory(this LettuceEncrypt.ILettuceEncryptServiceBuilder! builder, System.IO.DirectoryInfo! directory, string? pfxPassword) -> LettuceEncrypt.ILettuceEncryptServiceBuilder!
 static Microsoft.Extensions.DependencyInjection.LettuceEncryptServiceCollectionExtensions.AddLettuceEncrypt(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services) -> LettuceEncrypt.ILettuceEncryptServiceBuilder!
